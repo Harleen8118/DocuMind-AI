@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.5);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface-900/60 backdrop-blur-xl border border-surface-700/50 rounded-2xl;
+  }
+
+  .glass-panel-light {
+    @apply bg-surface-800/40 backdrop-blur-lg border border-surface-700/30 rounded-xl;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2.5 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-medium 
+           rounded-xl hover:from-brand-500 hover:to-brand-400 
+           transition-all duration-200 shadow-lg shadow-brand-600/25
+           active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 bg-surface-800 text-surface-200 font-medium 
+           rounded-xl border border-surface-700 hover:bg-surface-700 hover:border-surface-600
+           transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 text-surface-400 hover:text-white hover:bg-surface-800/50 
+           rounded-lg transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply px-6 py-2.5 bg-red-600/20 text-red-400 font-medium rounded-xl border border-red-600/30
+           hover:bg-red-600/30 hover:border-red-500/50 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-surface-800/60 border border-surface-700/50 rounded-xl
+           text-white placeholder-surface-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50
+           focus:border-brand-500/50 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-brand-500/5
+           hover:border-surface-600/50 hover:-translate-y-0.5;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 via-accent-cyan to-brand-300 
+           bg-clip-text text-transparent;
+  }
+
+  .status-badge {
+    @apply px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-ready {
+    @apply status-badge bg-emerald-500/20 text-emerald-400 border border-emerald-500/30;
+  }
+
+  .status-processing {
+    @apply status-badge bg-amber-500/20 text-amber-400 border border-amber-500/30 animate-pulse-soft;
+  }
+
+  .status-error {
+    @apply status-badge bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+
+  .status-pending {
+    @apply status-badge bg-surface-500/20 text-surface-400 border border-surface-500/30;
+  }
+
+  .shimmer-loading {
+    @apply bg-gradient-to-r from-surface-800 via-surface-700 to-surface-800 
+           bg-[length:200%_100%] animate-shimmer rounded-lg;
+  }
+}
