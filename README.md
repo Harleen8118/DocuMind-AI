@@ -126,7 +126,7 @@ npx vitest run
 
 ## 🛠️ Tech Stack
 
-**Backend:** Python 3.11, FastAPI, Google Gemini 1.5 Flash, Whisper, PyMuPDF, FAISS, sentence-transformers, PostgreSQL, Redis, JWT
+**Backend:** Python 3.11, FastAPI, Google Gemini 2.5 Flash, Whisper, PyMuPDF, FAISS, sentence-transformers, PostgreSQL, Redis, JWT
 
 **Frontend:** React 18, Vite, TailwindCSS, shadcn/ui, TanStack Query, Wavesurfer.js, React-PDF, Zustand
 

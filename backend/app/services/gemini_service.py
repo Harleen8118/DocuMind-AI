@@ -22,7 +22,7 @@ class GeminiService:
         """Configure the Gemini API if not already done."""
         if not self._configured:
             genai.configure(api_key=settings.GEMINI_API_KEY)
-            self._model = genai.GenerativeModel("gemini-1.5-flash")
+            self._model = genai.GenerativeModel("gemini-2.5-flash")
             self._configured = True
 
     def _get_model(self):
